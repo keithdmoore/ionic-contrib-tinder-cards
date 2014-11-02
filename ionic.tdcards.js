@@ -389,6 +389,11 @@
 
         var bringCardUp = function(card, amt, max) {
           var position, top, newTop;
+          if (card === undefined) {
+            console.log('card was undefined in bringCardUp function');
+            return;
+          }
+
           position = card.style.transform || card.style.webkitTransform;
           top = parseInt(position && position.split(',')[1] || 0);
           newTop = Math.max(0, Math.min(max, max - (max * Math.abs(amt))));
