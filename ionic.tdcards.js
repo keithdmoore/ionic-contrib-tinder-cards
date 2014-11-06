@@ -124,13 +124,6 @@
       this.onSnapBack(this.x, this.y, this.rotationAngle);
     },
 
-    /**
-     * Snap the card back to its original position
-     */
-    snapBack: function() {
-      this.onSnapBack(this.x, this.y, this.rotationAngle);
-    },
-
     isUnderThreshold: function() {
       //return true;
       return Math.abs(this.thresholdAmount) < 0.4;
