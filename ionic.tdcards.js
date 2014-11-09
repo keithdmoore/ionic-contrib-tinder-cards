@@ -349,6 +349,11 @@
                 leftText.style.opacity = 0;
               })
               .start();
+
+              $timeout(function() {
+                $scope.onSnapBack();
+              });
+
               /*
               animateSpringViaCss(el, 0, 0.5, 50, 700, 10, function (x) {
                 return el.style.transform = el.style.webkitTransform = 'translate3d(' + x + 'px,0,0)';
